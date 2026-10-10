@@ -1,11 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Study Buddy",
-  "version": "0.1",
-  "description": "A buddy on your screen that keeps you focused.",
-  "permissions": ["storage", "tabs", "alarms"],
-  "background": { "service_worker": "background.js" },
+  "name": "Screen Buddy - Hackathon Edition",
+  "version": "1.0",
+  "description": "An interactive animated pet character floating on the bottom of your screen!",
+  "action": {},
   "content_scripts": [
-    { "matches": ["<all_urls>"], "js": ["shared.js", "content.js"], "run_at": "document_idle" }
+    {
+      "matches": ["<all_urls>"],
+      "css": ["style.css"],
+      "js": ["content.js"]
+    }
   ]
 }
