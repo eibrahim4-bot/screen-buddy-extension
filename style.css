@@ -1,0 +1,59 @@
+#screen-buddy-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 2147483647;
+  pointer-events: auto;
+  user-select: none;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+#screen-buddy-character {
+  width: 95px;
+  height: 95px;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+  color: white;
+  animation: floatBounce 3s infinite ease-in-out;
+  transition: transform 0.2s ease;
+}
+
+#screen-buddy-character:hover {
+  transform: scale(1.08);
+}
+
+.buddy-face {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.buddy-status {
+  font-size: 11px;
+  margin-top: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
+@keyframes floatBounce {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(3deg); }
+}
+
+.buddy-happy {
+  animation: happyJump 0.4s ease !important;
+}
+
+@keyframes happyJump {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3) rotate(-12deg); }
+  100% { transform: scale(1); }
+}
